@@ -213,3 +213,9 @@ function showDetails(product) {
   product.style.display = 'block'; // Show selected product details
   resultsDiv.appendChild(product.cloneNode(true));
 }
+
+var account = document.getElementById('account-icons');
+
+account.onclick = () =>{
+  window.open("http://127.0.0.1:5501/account.html");
+}

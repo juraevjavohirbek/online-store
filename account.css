@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    scroll-margin-top: 2rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --text-color: #191919;
+    --main-color: #ff5a00;
+    --bg-color: #fff;
+}
+
+section{
+    padding: 20px 10%;
+}
+
+body{
+    color: var(--text-color);
+    background: #fff;
+}
+
+/* header section */
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 100;
+    background-color: #fff;
+    padding: 20px 10%;
+}
+
+.header-title h2{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.header-icon{
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.593);
+}
+
+.header-icon:hover{
+    color: var(--main-color);
+}
+
+#exit{
+    padding-left: 20px;
+}
+
+/* account-settings section */
+
+.header{
+    padding: 15px 0;
+    color: var(--main-color);
+}
+
+.account-settings{
+    padding-top: 80px;
+}
+
+.items{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.data p{
+    color: rgba(0, 0, 0, 0.616);
+    padding-top: 8px;
+}
+
+.items button{
+    color: rgba(26, 165, 131, 0.695);
+    border: none;
+    background-color: #FFF;
+    font-weight: 700;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.info h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px 0;
+}

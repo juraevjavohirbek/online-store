@@ -339,5 +339,38 @@ header{
     padding-bottom: 20px;
 }
 
+@media(max-width: 1024px){
+    .nav{
+        padding: 20px;
+    }
+
+    section{
+        padding: 20px 8%;
+    }
+}
+
+@media(max-width: 768px){
+    .heading h2{
+        font-size: 1.5rem;
+    }
+
+    .heading a{
+        top: 5px;
+    }
+
+    .box .price{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 500px){
+    .header-main h2{
+        font-size: 1.5rem;
+    }
+
+    .search{
+        padding-top: 100px;
+    }
+}
 
 

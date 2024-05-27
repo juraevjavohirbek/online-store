@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="./account.css">
+    <!-- box icons -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="header-title"><h2>Java Store</h2></div>
+        <div>
+            <i class='bx bx-bell header-icon'></i>
+            <i class='bx bx-door-open header-icon' id="exit"></i>
+        </div>
+    </header>
+
+    <section class="account-settings">
+        <h2 class="header">Account settings</h2>
+        <div class="section-main">
+            <hr>
+            <!-- item1 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Your data</h3>
+                    <p>Information about you and your account</p>
+                </div>
+                <button>CHANGE</button>
+            </div>
+            <hr>
+            <!-- item2 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Devivery Addresses</h3>
+                    <p>Manage your adresses</p>
+                </div>
+                <button>CHANGE</button>
+            </div>
+            <hr>
+            <!-- item3 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Payment cards</h3>
+                    <p>Enable quick shopping</p>
+                </div>
+                <button>SEE</button>
+            </div>
+            <hr>
+            <!-- item4 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Consents to notifications</h3>
+                    <p>Stay up to date</p>
+                </div>
+                <button>CHANGE</button>
+            </div>
+            <hr>
+            <!-- item5 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Sounds and vibrations</h3>
+                    <p>set as you prefeer</p>
+                </div>
+                <button>CHANGE</button>
+            </div>
+            <hr>
+            <!-- item1 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Location settings</h3>
+                    <p>set your of delivery, language and currency</p>
+                </div>
+                <button>EDIT</button>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section class="account-services">
+        <h2 class="header">Services</h2>
+        <div class="section-main">
+            <hr>
+            <!-- item1 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Java One!</h3>
+                    <p>Receive gifts in exchange for picking up your prcels</p>
+                </div>
+                <button>SEE</button>
+            </div>
+            <hr>
+            <!-- item2 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Java Coins</h3>
+                    <p>Collect and pay less for your purchases</p>
+                </div>
+                <button>SEE</button>
+            </div>
+            <hr>
+            <!-- item3 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Personalization</h3>
+                    <p>Tailor Java to your needs</p>
+                </div>
+                <button>SEE</button>
+            </div>
+            <hr>
+            <!-- item4 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Java Falimy</h3>
+                    <p>Help your loved ones make purchases</p>
+                </div>
+                <button>CHANGE</button>
+            </div>
+            <hr>
+        </div>
+    </section>
+    
+    <section class="account-safety">
+        <h2 class="header">Safety</h2>
+        <div class="section-main">
+            <hr>
+            <!-- item1 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Password</h3>
+                    <p>Create a strong password</p>
+                </div>
+                <button>Edit</button>
+            </div>
+            <hr>
+            <!-- item2 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Two-Factor Authentication</h3>
+                    <p>Increase your  account security</p>
+                </div>
+                <button>See</button>
+            </div>
+            <hr>
+            <!-- item3 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Biometric Data</h3>
+                    <p>protect your purchases</p>
+                </div>
+                <button>change</button>
+            </div>
+            <hr>
+            <!-- item4 -->
+            <div class="items">
+                <div class="data">
+                    <h3>Signed in devices</h3>
+                    <p>Easily sign out og your devices</p>
+                </div>
+                <button>see</button>
+            </div>
+            <hr> 
+        </div>
+    </section>
+
+    <section class="help-and-support">
+        <h2 class="header">Help and Support</h2>
+        <hr>
+        <div class="info">
+            <h3>Java Help Center</h3>
+            <hr>
+            <h3>Java Academy</h3>
+            <hr>
+        </div>
+    </section>
+
+
+
+    <script>
+        var exit =document.getElementById("exit");
+
+        exit.onclick = () => {
+            window.open("http://127.0.0.1:5501/#");
+        }
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
