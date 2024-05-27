@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- box-icons -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header" id="header">
+       <div class="header-main">
+            <h2>Java Store</h2>
+            <ul class="icon-bar">
+                <div class="bx bx-conversation header-icons" id="header-icons"></div>
+                <div class="bx bx-shopping-bag header-icons" id="cart-icon"></div>
+                <div class="bx bx-user header-icons" id="header-icons"></div>
+            </ul>
+            <!-- cart -->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!-- Content -->
+                <div class="cart-content">
+                    
+                </div>
+                <!-- total -->
+                <div class="total">
+                    <div class="total-title">Total:</div>
+                    <div class="total-price">PLN 0</div>
+                </div>
+                <!-- Buy buttom -->
+                <button type="button" class="btn-buy">Buy Now</button>
+                <!-- Cart Close -->
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
+       </div>
+    </header>
+
+    <!-- search -->
+    <section class="search" id="search">
+        <div class="serch-form">
+            <form action="">
+                <input type="text" placeholder="What are you looking for?" class="header-input" id="searchInput" oninput="handleInput()">
+                <button type="button" class="btn">Fing</button>
+                <div id="results"></div>
+                <div id="productDetails"></div>
+            </form>
+       </div>
+    </section>
+    <!-- navigation section -->
+    <!-- <section class="navbar" id="navbar">
+        <ul class="navbar-items">
+            <li><a href="#">Electronics
+            </a></li>
+            <li><a href="#">Clothes</a></li>
+            <li><a href="#">Sport</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Luggage & Bags</a></li>
+            <li><a href="#">Shoes</a></li>
+        </ul>
+    </section> -->
+
+    <!-- popular products -->
+   <section class="popular" id="popular">
+        <div class="heading">
+            <h2>Popular Products Of The Week</h2>
+            <a href="#">see more</a>
+        </div>
+        <div class="container swiper">
+            <div class="swiper-wrapper" id="productList">
+                <!-- box-1 -->
+                <div class="swiper-slide box" data-name="T-shirts">
+                    <div class="box-image">
+                        <img src="images/gome1.png" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 50.20</h1>
+                    <h3 class="product-title">T-shirts</h3>
+                    <p>Delivery Thu, May16</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-2 -->
+                <div class="swiper-slide box" data-name="Wireless AirPods">
+                    <div class="box-image">
+                        <img src="images/homw2.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 100</h1>
+                    <h3 class="product-title">Wireless AirPods</h3>
+                    <p>Delivery Fri, May20</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-3 -->
+                <div class="swiper-slide box" data-name="Winter Coat">
+                    <div class="box-image">
+                        <img src="images/home3.png" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 150.90</h1>
+                    <h3 class="product-title">Winter Coat</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-4 -->
+                <div class="swiper-slide box" data-name="Metal Bottle">
+                    <div class="box-image">
+                        <img src="images/home4.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 110.99</h1>
+                    <h3 class="product-title">Metal Bottle</h3>
+                    <p>Delivery Mon, May26</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-5 -->
+                <div class="swiper-slide box" data-name="Metal Sunglusses">
+                    <div class="box-image">
+                        <img src="images/home5.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 70.50</h1>
+                    <h3 class="product-title">Metal Sunglusses</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-6 -->
+                <div class="swiper-slide box" data-name="Adidas Cap">
+                    <div class="box-image">
+                        <img src="images/home6.png" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 40.90</h1>
+                    <h3 class="product-title">Adidas Cap</h3>
+                    <p>Delivery Wed, May23</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-7 -->
+                <div class="swiper-slide box" data-name="Adidas bag">
+                    <div class="box-image">
+                        <img src="images/home7.png" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 260</h1>
+                    <h3 class="product-title">Adidas bag</h3>
+                    <p>Delivery Thu, May18</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-8 -->
+                <div class="swiper-slide box" data-name="Adidas Shoes">
+                    <div class="box-image">
+                        <img src="images/home8.png" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 300</h1>
+                    <h3 class="product-title">Adidas Shoes</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div> 
+        </div>
+   </section>
+
+   <!-- recomended -->
+   <section class="recomended" id="recomended">
+    <div class="heading">
+        <h2>Recomended For You</h2>
+        <a href="#">see more</a>
+    </div>
+    <div class="container swiper">
+        <div class="swiper-wrapper ">
+            <!-- box-1 -->
+            <div class="swiper-slide box" data-name="Power Bank">
+                <div class="box-image">
+                    <img src="images/recomended1.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 150.20</h1>
+                <h3 class="product-title">Power Bank</h3>
+                <p>Delivery Thu, May16</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-2 -->
+            <div class="swiper-slide box" data-name="Football Boots">
+                <div class="box-image">
+                    <img src="images/recomended2.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 250</h1>
+                <h3 class="product-title">Football Boots</h3>
+                <p>Delivery Fri, May20</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-3 -->
+            <div class="swiper-slide box" data-name="TV">
+                <div class="box-image">
+                    <img src="images/recomended3.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 1030.90</h1>
+                <h3 class="product-title">TV</h3>
+                <p>Delivery Tomorrow</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-4 -->
+            <div class="swiper-slide box" data-name="Laptop HP">
+                <div class="box-image">
+                    <img src="images/recomended4.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 3009.99</h1>
+                <h3 class="product-title">Laptop HP</h3>
+                <p>Delivery Mon, May26</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-5 -->
+            <div class="swiper-slide box" data-name="HandClock Rolex">
+                <div class="box-image">
+                    <img src="images/recomended5.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 1000.50</h1>
+                <h3 class="product-title">HandClock Rolex</h3>
+                <p>Delivery Tomorrow</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-6 -->
+            <div class="swiper-slide box" data-name="Gaming Keyboard">
+                <div class="box-image">
+                    <img src="images/recomended6.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 99.90</h1>
+                <h3 class="product-title">Gaming Keyboard</h3>
+                <p>Delivery Wed, May23</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-7 -->
+            <div class="swiper-slide box" data-name="Play Station 5">
+                <div class="box-image">
+                    <img src="images/recomended7.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 3100</h1>
+                <h3 class="product-title">Play Station 5</h3>
+                <p>Delivery Thu, May18</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- box-8 -->
+            <div class="swiper-slide box" data-name="Headphone JBL">
+                <div class="box-image">
+                    <img src="images/recomended8.jpg" alt="" class="product-img">
+                </div>
+                <h1 class="price">PLN 870</h1>
+                <h3 class="product-title">Headphone JBL</h3>
+                <p>Delivery Tomorrow</p>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div> 
+    </div>
+    </section>
+
+    <!-- category section -->
+    <section class="catecory" id="catedory">
+        <div class="heading">
+            <h2>Find Inspirations In The Electronics Category</h2>
+        </div>
+        <div class="category-container">
+            <div class="category-box">
+                <div class="category-img">
+                    <img src="images/headphones.jpg" alt="Headphones catogory category img">
+                </div>
+                <div class="category-text">
+                    <h2>Headphones</h2>
+                </div>
+            </div>
+            <!-- box 2 -->
+            <div class="category-box">
+                <div class="category-img">
+                    <img src="images/category.jpg" alt="Headphones catogory img">
+                </div>
+                <div class="category-text">
+                    <h2>GPS and Accesssories</h2>
+                </div>
+            </div>
+            <!-- box 3 -->
+            <div class="category-box">
+                <div class="category-img ">
+                    <img src="images/category3.jpg" alt="Headphones catogory img">
+                </div>
+                <div class="category-text">
+                    <h2>Small Households</h2>
+                </div>
+            </div>
+            <!-- box4 -->
+            <div class="category-box">
+                <div class="category-img">
+                    <img src="images/category4.jpg" alt="Headphones catogory category img">
+                </div>
+                <div class="category-text">
+                    <h2>Ebook Readers</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interested section -->
+    <section class="interested" id="interested">
+        <div class="heading">
+            <h2>You May Be Interested In</h2>
+            <a href="#">see more</a>
+        </div>
+        <div class="container swiper">
+            <div class="swiper-wrapper ">
+                <!-- box-1 -->
+                <div class="swiper-slide box" data-name="Wired Mouse Razer">
+                    <div class="box-image">
+                        <img src="images/interested1.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 120.20</h1>
+                    <h3 class="product-title">Wired Mouse Razer</h3>
+                    <p>Delivery Thu, May19</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-2 -->
+                <div class="swiper-slide box" data-name="Airpods Pro 2">
+                    <div class="box-image">
+                        <img src="images/interested2.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 440</h1>
+                    <h3 class="product-title">Airpods Pro 2</h3>
+                    <p>Delivery Fri, May23</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-3 -->
+                <div class="swiper-slide box" data-name="Adidas Soccer Ball">
+                    <div class="box-image">
+                        <img src="images/interested3.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 200</h1>
+                    <h3 class="product-title">Adidas Soccer Ball</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-4 -->
+                <div class="swiper-slide box" data-name="4F T-Shirt For Man" >
+                    <div class="box-image">
+                        <img src="images/interested4.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 39.99</h1>
+                    <h3 class="product-title">4F T-Shirt For Man</h3>
+                    <p>Delivery Mon, May26</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-5 -->
+                <div class="swiper-slide box" data-name="Zara Men Silver">
+                    <div class="box-image">
+                        <img src="images/interested5.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 85.50</h1>
+                    <h3 class="product-title">Zara Men Silver</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-6 -->
+                <div class="swiper-slide box" data-name="Laptop HP Victim">
+                    <div class="box-image">
+                        <img src="images/interested6.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 5490</h1>
+                    <h3 class="product-title">Laptop HP Victim</h3>
+                    <p>Delivery Wed, May23</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-7 -->
+                <div class="swiper-slide box" data-name="Skatebord">
+                    <div class="box-image">
+                        <img src="images/interested7.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 1360</h1>
+                    <h3 class="product-title">Skatebord</h3>
+                    <p>Delivery Thu, May18</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-8 -->
+                <div class="swiper-slide box" data-name="Samsung Galaxy Watch 6">
+                    <div class="box-image">
+                        <img src="images/interested8.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 2870</h1>
+                    <h3 class="product-title">Samsung Galaxy Watch 6</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-9 -->
+                <div class="swiper-slide box" data-name="USB Adapter">
+                    <div class="box-image">
+                        <img src="images/interested9.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 120</h1>
+                    <h3 class="product-title">USB Adapter</h3>
+                    <p>Delivery Tomorrow</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <!-- box-10 -->
+                <div class="swiper-slide box" data-name="FatBike Shimano">
+                    <div class="box-image">
+                        <img src="images/interested10.jpg" alt="" class="product-img">
+                    </div>
+                    <h1 class="price">PLN 1469</h1>
+                    <h3 class="product-title">FatBike Shimano</h3>
+                    <p>Delivery Wed, may 20</p>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div> 
+        </div>
+        </section>
+    
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- javascrit -->
+    <script src="./app.js"></script>
+</body>
+</html>
